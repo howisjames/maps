@@ -100,8 +100,8 @@ function addGeoms(data) {
   }
 
   // The geometries are styled slightly differently on mouse hovers
-  let geomStyle = { color: "#2ca25f", fillColor: "#99d8c9", weight: 2 };
-  let geomHoverStyle = { color: "green", fillColor: "#2ca25f", weight: 3 };
+  let geomStyle = { color: "#2ca25f", fillColor: "", weight: 2 };
+  let geomHoverStyle = { color: "green", fillColor: "", weight: 3 };
 
   L.geoJSON(fc, {
     onEachFeature: function (feature, layer) {
@@ -167,30 +167,30 @@ function addPoints(data) {
     marker.addTo(pointGroupLayer);
 
     // UNCOMMENT THIS LINE TO USE POPUPS
-    //marker.bindPopup('<h2>' + data[row].name + '</h2>There's a ' + data[row].description + ' here');
+    marker.bindPopup('<h2>' + data[row].Site + '</h2><br>' + data[row].Description + '<br>' + data[row].URL);
 
     // COMMENT THE NEXT GROUP OF LINES TO DISABLE SIDEBAR FOR THE MARKERS
-    marker.feature = {
-      properties: {
-        site: data[row].Site,
-        description: data[row].Description,
-      },
-    };
-    marker.on({
-      click: function (e) {
-        L.DomEvent.stopPropagation(e);
-        document.getElementById("sidebar-title").innerHTML =
-          e.target.feature.properties.Site;
-        document.getElementById("sidebar-content").innerHTML =
-          e.target.feature.properties.Description;
-        sidebar.open(panelID);
-      },
-    });
+//    marker.feature = {
+//      properties: {
+//        site: data[row].Site,
+//        description: data[row].Description,
+//      },
+//    };
+//    marker.on({
+//      click: function (e) {
+//        L.DomEvent.stopPropagation(e);
+//        document.getElementById("sidebar-title").innerHTML =
+//          e.target.feature.properties.Site;
+//        document.getElementById("sidebar-content").innerHTML =
+//          e.target.feature.properties.Description;
+//        sidebar.open(panelID);
+//      },
+//    });
     // COMMENT UNTIL HERE TO DISABLE SIDEBAR FOR THE MARKERS
 
     // AwesomeMarkers is used to create fancier icons
     let icon = L.AwesomeMarkers.icon({
-      icon: "info-circle",
+      icon: "campground",
       iconColor: "white",
       markerColor: data[row].hexcolor,
       prefix: "fa",
