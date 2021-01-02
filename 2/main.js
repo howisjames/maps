@@ -91,8 +91,10 @@ function addGeoms(data) {
       let features = parseGeom(JSON.parse(data[row].geometry));
       features.forEach((el) => {
         el.properties = {
-          name: data[row].name,
-          description: data[row].description,
+          name: data[row].Site,
+          description: data[row].Description,
+		  cost: data[row].Cost,
+		  link: data[row].URL,
         };
         fc.features.push(el);
       });
