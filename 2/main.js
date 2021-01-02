@@ -92,9 +92,7 @@ function addGeoms(data) {
       features.forEach((el) => {
         el.properties = {
           name: data[row].Site,
-          description: data[row].Description,
-		  cost: data[row].Cost,
-		  link: data[row].URL,
+          description: data[row].Description  + '<br>' +  data[row].Cost  + '<br>' + data[row].URL,
         };
         fc.features.push(el);
       });
@@ -126,8 +124,6 @@ function addGeoms(data) {
             e.target.feature.properties.name;
           document.getElementById("sidebar-content").innerHTML =
             e.target.feature.properties.description;
-		  document.getElementById("sidebar-content").innerHTML =
-            e.target.feature.properties.link;
           sidebar.open(panelID);
         },
       });
@@ -177,8 +173,7 @@ function addPoints(data) {
     marker.feature = {
       properties: {
         name: data[row].Site,
-        description: data[row].Description,
-        link: data[row].URL,
+        description: data[row].Description  + '<br>' + data[row].Cost  + '<br>' + data[row].URL,
       },
     };
     marker.on({
@@ -188,8 +183,6 @@ function addPoints(data) {
           e.target.feature.properties.name;
         document.getElementById("sidebar-content").innerHTML =
           e.target.feature.properties.description;
-		document.getElementById("sidebar-content").innerHTML =
-          e.target.feature.properties.link;
         sidebar.open(panelID);
       },
     });
