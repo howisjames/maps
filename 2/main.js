@@ -126,6 +126,8 @@ function addGeoms(data) {
             e.target.feature.properties.name;
           document.getElementById("sidebar-content").innerHTML =
             e.target.feature.properties.description;
+		  document.getElementById("sidebar-content").innerHTML =
+            e.target.feature.properties.link;
           sidebar.open(panelID);
         },
       });
@@ -135,7 +137,7 @@ function addGeoms(data) {
 }
 
 /*
- * addPoints is a bit simpler, as no GeoJSON is needed for the points
+ * addPoints is a bit simpler as no GeoJSON is needed for the points
  */
 function addPoints(data) {
   data = data.data;
@@ -174,17 +176,20 @@ function addPoints(data) {
     // COMMENT THE NEXT GROUP OF LINES TO DISABLE SIDEBAR FOR THE MARKERS
     marker.feature = {
       properties: {
-        site: data[row].Site,
+        name: data[row].Site,
         description: data[row].Description,
+        link: data[row].URL,
       },
     };
     marker.on({
       click: function (e) {
         L.DomEvent.stopPropagation(e);
         document.getElementById("sidebar-title").innerHTML =
-          e.target.feature.properties.Site;
+          e.target.feature.properties.name;
         document.getElementById("sidebar-content").innerHTML =
-          e.target.feature.properties.Description;
+          e.target.feature.properties.description;
+		document.getElementById("sidebar-content").innerHTML =
+          e.target.feature.properties.link;
         sidebar.open(panelID);
       },
     });
