@@ -91,8 +91,8 @@ function addGeoms(data) {
       let features = parseGeom(JSON.parse(data[row].geometry));
       features.forEach((el) => {
         el.properties = {
-          name: data[row].Site,
-          description: data[row].Description  + '<br>' +  data[row].Cost  + '<br>' + data[row].URL,
+          name: data[row].name,
+          description: data[row].description,
         };
         fc.features.push(el);
       });
@@ -173,7 +173,7 @@ function addPoints(data) {
     marker.feature = {
       properties: {
         name: data[row].Site,
-        description: data[row].Description  + '<br>' + data[row].Cost  + '<br>' + data[row].URL,
+        description: data[row].Description  + '<br> Fee: ' + data[row].Cost  + "<br><a target='_new' href=" + data[row].URL + ">" + data[row].URL + '</a>',
       },
     };
     marker.on({
