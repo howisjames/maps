@@ -147,7 +147,7 @@ function addPoints(data) {
   let markerType = "marker";
 
   // Marker radius
-  // Wil be in pixels for circleMarker, metres for circle
+  // Will be in pixels for circleMarker, metres for circle
   // Ignore for point
   let markerRadius = 100;
 
@@ -192,7 +192,7 @@ function addPoints(data) {
     let icon = L.AwesomeMarkers.icon({
       icon: "tree",
       iconColor: "white",
-      markerColor: data[row].hexcolor,
+      markerColor: data[row].pincolor,
       prefix: "fa",
       extraClasses: "fa-rotate-0",
     });
