@@ -115,7 +115,7 @@ function addGeoms(data) {
         click: function (e) {
           // This zooms the map to the clicked geometry
           // Uncomment to enable
-          // map.fitBounds(e.target.getBounds());
+           map.fitBounds(e.target.getBounds());
 
           // if this isn't added, then map.click is also fired!
           L.DomEvent.stopPropagation(e);
@@ -170,27 +170,27 @@ function addPoints(data) {
 //    marker.bindPopup('<h2>' + data[row].Site + '</h2>' + data[row].Description + '<br>' + data[row].URL);
 
     // COMMENT THE NEXT GROUP OF LINES TO DISABLE SIDEBAR FOR THE MARKERS
-//    marker.feature = {
-//      properties: {
-//        site: data[row].Site,
-//        description: data[row].Description,
-//      },
-//    };
-//    marker.on({
-//      click: function (e) {
-//        L.DomEvent.stopPropagation(e);
-//        document.getElementById("sidebar-title").innerHTML =
-//          e.target.feature.properties.Site;
-//        document.getElementById("sidebar-content").innerHTML =
-//          e.target.feature.properties.Description;
-//        sidebar.open(panelID);
-//      },
-//    });
+    marker.feature = {
+      properties: {
+        site: data[row].Site,
+        description: data[row].Description,
+      },
+    };
+    marker.on({
+      click: function (e) {
+        L.DomEvent.stopPropagation(e);
+        document.getElementById("sidebar-title").innerHTML =
+          e.target.feature.properties.Site;
+        document.getElementById("sidebar-content").innerHTML =
+          e.target.feature.properties.Description;
+        sidebar.open(panelID);
+      },
+    });
     // COMMENT UNTIL HERE TO DISABLE SIDEBAR FOR THE MARKERS
 
     // AwesomeMarkers is used to create fancier icons
     let icon = L.AwesomeMarkers.icon({
-      icon: "campground",
+      icon: "tree",
       iconColor: "white",
       markerColor: data[row].hexcolor,
       prefix: "fa",
