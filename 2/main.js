@@ -24,7 +24,7 @@ let panelID = "my-info-panel";
  */
 function init() {
   // Create a new Leaflet map centered on the state of Texas
-  map = L.map("map").setView([30.7367, -98.37], 19); 	
+  map = L.map("map").setView([30.73, -98.37], 5); 	
 
   // This is the Carto Positron basemap
   L.tileLayer(
@@ -100,8 +100,8 @@ function addGeoms(data) {
   }
 
   // The geometries are styled slightly differently on mouse hovers
-  let geomStyle = { color: "#2ca25f", fillColor: "", weight: 2 };
-  let geomHoverStyle = { color: "green", fillColor: "", weight: 3 };
+  let geomStyle = { color: "#2ca25f", fillColor: "#2ca25f", fill-opacity: 0, weight: 2 };
+  let geomHoverStyle = { color: "green", fillColor: "#2ca25f", fill-opacity: 0, weight: 3 };
 
   L.geoJSON(fc, {
     onEachFeature: function (feature, layer) {
