@@ -26,7 +26,7 @@ function init() {
   // Create a new Leaflet map centered on the state of Texas
   map = L.map("map").setView([30.73, -98.37], 5); 	
 
-  // This is the Carto Voyager basemap
+  // This is the Carto Positron basemap
   L.tileLayer(
     "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png",
     {
