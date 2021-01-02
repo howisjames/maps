@@ -100,8 +100,8 @@ function addGeoms(data) {
   }
 
   // The geometries are styled slightly differently on mouse hovers
-  let geomStyle = { color: "#2ca25f", fillColor: "#2ca25f", fill-opacity: 0, weight: 2 };
-  let geomHoverStyle = { color: "green", fillColor: "#2ca25f", fill-opacity: 0, weight: 3 };
+  let geomStyle = { color: "#2ca25f", fillColor: "#2ca25f", weight: 2 };
+  let geomHoverStyle = { color: "green", fillColor: "#2ca25f", weight: 3 };
 
   L.geoJSON(fc, {
     onEachFeature: function (feature, layer) {
@@ -167,7 +167,7 @@ function addPoints(data) {
     marker.addTo(pointGroupLayer);
 
     // UNCOMMENT THIS LINE TO USE POPUPS
-    marker.bindPopup('<h2>' + data[row].Site + '</h2><br>' + data[row].Description + '<br>' + data[row].URL);
+    marker.bindPopup('<h2>' + data[row].Site + '</h2>' + data[row].Description + '<br>' + data[row].URL);
 
     // COMMENT THE NEXT GROUP OF LINES TO DISABLE SIDEBAR FOR THE MARKERS
 //    marker.feature = {
