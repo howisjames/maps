@@ -1,6 +1,9 @@
 # maps
 These are various custom web maps created for travel and tourism purposes.
 
+**all of these are presently broken because they utilize TableTop.js which is unable to access Gsheet data due to Google's changed API. Need to switch to Chris Arderne's solution using PapaParse.js**
+https://github.com/carderne/leaflet-gsheets
+
 ## nassau
 Points of interest for a walking tour of Nassau Bahamas.
 Based on code from:
