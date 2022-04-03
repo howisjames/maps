@@ -23,7 +23,7 @@ let panelID = "my-info-panel";
  */
 function init() {
   // Create a new Leaflet map centered on the continental US
-  map = L.map("map").setView([25.079, -77.358], 10);
+  map = L.map("map").setView([25.079, -77.358], 14);
 
   // This is the basemap tiles
 
