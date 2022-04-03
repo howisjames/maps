@@ -8,7 +8,7 @@
 // PASTE YOUR URLs HERE
 // these URLs come from Google Sheets 'shareable link' form
 // the first is the geometry layer and the second the points
-let geomURL =   "https://docs.google.com/spreadsheets/d/e/2PACX-1vSI91D-e8hw1J36nINfblmPzUwolKBP41KCDHhMNXGAlYMrAOPzyoY3uSx8ZDu769a4ENJ-_j79jCIK/pub?output=csv";
+// let geomURL =   "https://docs.google.com/spreadsheets/d/e/2PACX-1vSI91D-e8hw1J36nINfblmPzUwolKBP41KCDHhMNXGAlYMrAOPzyoY3uSx8ZDu769a4ENJ-_j79jCIK/pub?output=csv";
 let pointsURL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vRgdp8ewrShW_32NwC7lNBCbWmW3K-XJGuQMI8FeJ0a3T_F2_8qtJafnScGYJ_-PuyPlPOd-a8ORlTy/pub?output=csv";
 
