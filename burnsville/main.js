@@ -8,7 +8,7 @@
 // PASTE YOUR URLs HERE
 // these URLs come from Google Sheets 'shareable link' form
 // the first is the geometry layer and the second the points
-let geomURL =   "";
+let geomURL =   "https://docs.google.com/spreadsheets/d/e/2PACX-1vSI91D-e8hw1J36nINfblmPzUwolKBP41KCDHhMNXGAlYMrAOPzyoY3uSx8ZDu769a4ENJ-_j79jCIK/pub?output=csv";
 let pointsURL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vRgdp8ewrShW_32NwC7lNBCbWmW3K-XJGuQMI8FeJ0a3T_F2_8qtJafnScGYJ_-PuyPlPOd-a8ORlTy/pub?output=csv";
 
@@ -169,10 +169,11 @@ function addPoints(data) {
  //   marker.bindPopup('<h2>' + data[row].site + '</h2>');
 
     // COMMENT THE NEXT GROUP OF LINES TO DISABLE SIDEBAR FOR THE MARKERS
+	// add cost and url for each site to the description in the sidebar
     marker.feature = {
       properties: {
         name: data[row].site,
-        description: data[row].description + " cost: " + data[row].cost, 
+        description: data[row].description, 
       },
     };
     marker.on({
