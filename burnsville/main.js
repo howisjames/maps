@@ -25,14 +25,15 @@ function init() {
   // Create a new Leaflet map centered on the continental US
   map = L.map("map").setView([35.9, -82.2], 10);
 
-  // This is the basemap: Stadia Outdoors
+  // This is the basemap tiles
+  
   L.tileLayer(
-    "https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png",
+    "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}",
     {
       attribution:
-        "&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors",
+        "Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>",
       subdomains: "abcd",
-      maxZoom: 19,
+      maxZoom: 20,
     }
   ).addTo(map);
 
