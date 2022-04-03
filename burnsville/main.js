@@ -28,10 +28,10 @@ function init() {
   // This is the basemap tiles
   
   L.tileLayer(
-    "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}",
+    "https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png",
     {
       attribution:
-        "Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>",
+        '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
       subdomains: "abcd",
       maxZoom: 20,
     }
@@ -174,7 +174,7 @@ function addPoints(data) {
     marker.feature = {
       properties: {
         name: data[row].site,
-        description: data[row].description, 
+        description: data[row].description,
       },
     };
     marker.on({
