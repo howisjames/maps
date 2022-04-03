@@ -8,8 +8,7 @@
 // PASTE YOUR URLs HERE
 // these URLs come from Google Sheets 'shareable link' form
 // the first is the geometry layer and the second the points
-let geomURL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsAyA0Hpk_-WpKyN1dfqi5IPEIC3rqEiL-uwElxJpw_U7BYntc8sDw-8sWsL87JCDU4lVg2aNi65ES/pub?output=csv";
+let geomURL =   "";
 let pointsURL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vRgdp8ewrShW_32NwC7lNBCbWmW3K-XJGuQMI8FeJ0a3T_F2_8qtJafnScGYJ_-PuyPlPOd-a8ORlTy/pub?output=csv";
 
@@ -167,25 +166,25 @@ function addPoints(data) {
     marker.addTo(pointGroupLayer);
 
     // UNCOMMENT THIS LINE TO USE POPUPS
-    marker.bindPopup('<h2>' + data[row].site + '</h2>');
+ //   marker.bindPopup('<h2>' + data[row].site + '</h2>');
 
     // COMMENT THE NEXT GROUP OF LINES TO DISABLE SIDEBAR FOR THE MARKERS
-//    marker.feature = {
-//      properties: {
-//        name: data[row].name,
-//        description: data[row].description,
-//      },
-//    };
-//    marker.on({
-//      click: function (e) {
-//        L.DomEvent.stopPropagation(e);
-//        document.getElementById("sidebar-title").innerHTML =
-//          e.target.feature.properties.name;
-//        document.getElementById("sidebar-content").innerHTML =
-//          e.target.feature.properties.description;
-//        sidebar.open(panelID);
-//      },
-//    });
+    marker.feature = {
+      properties: {
+        name: data[row].site,
+        description: data[row].description,
+      },
+    };
+    marker.on({
+      click: function (e) {
+        L.DomEvent.stopPropagation(e);
+        document.getElementById("sidebar-title").innerHTML =
+          e.target.feature.properties.name;
+        document.getElementById("sidebar-content").innerHTML =
+          e.target.feature.properties.description;
+        sidebar.open(panelID);
+      },
+    });
     // COMMENT UNTIL HERE TO DISABLE SIDEBAR FOR THE MARKERS
 
     // AwesomeMarkers is used to create fancier icons
