@@ -172,7 +172,7 @@ function addPoints(data) {
     marker.feature = {
       properties: {
         name: data[row].site,
-        description: data[row].description,
+        description: data[row].description + " cost: " + data[row].cost, 
       },
     };
     marker.on({
