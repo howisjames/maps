@@ -23,14 +23,14 @@ let panelID = "my-info-panel";
  */
 function init() {
   // Create a new Leaflet map centered on the continental US
-  map = L.map("map").setView([35.9, -82.3], 12);
+  map = L.map("map").setView([35.9, -82.2], 10);
 
-  // This is the Carto Positron basemap
+  // This is the basemap: Stadia Outdoors
   L.tileLayer(
-    "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png",
+    "https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png",
     {
       attribution:
-        "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> &copy; <a href='http://cartodb.com/attributions'>CartoDB</a>",
+        "&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors",
       subdomains: "abcd",
       maxZoom: 19,
     }
