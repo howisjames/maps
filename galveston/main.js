@@ -2,19 +2,19 @@
 
 /*
  * Script to display two tables from Google Sheets as point and geometry layers using Leaflet
- * The Sheets are then imported using PapaParse and overwrite the initially laded layers
+ * The Sheets are then imported using PapaParse and overwrite the initially loaded layers
  */
 
 // PASTE YOUR URLs HERE
 // these URLs come from Google Sheets 'shareable link' form
-// the first is the geometry layer of Galveston Trolley and the second is the points of interest
-let geomURL =
+// let geomURL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vTGYtIrMd3OL14HgktvPkADDY4uSvXioRaL13_SSLIN6uAyIKInZDHTsBAFyq2jZoTJJ_8X_0oK7zgT/pub?output=csv";
 // let pointsURL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vTfI7L-4LrXTAPRmKw5odIdO5i-oK_z0kRMiAYanDUc43xO1j1SrqG_MmhgdeFE-KmkefECF5ZIfyf4/pub?output=csv";
-
-// let geomURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSH7hjjxjxik5SmCoomunEz3KKza7pnl_V9lYb4eG1DZwSpx6vEYWoS_GXdU9KU2y_BBTw6w6TKG6yr/pub?output=csv";
-let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRxajqMRQG-PaBqH39Rk1j0djDE8paUBm5QQJF7S9MVQmjBO15FTSU0NHgajvpKG0FHHoo7IHNxeTF/pub?output=csv";
+  
+// the first is the geometry layer of Galveston Trolley and the second is the points of interest
+let geomURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTGYtIrMd3OL14HgktvPkADDY4uSvXioRaL13_SSLIN6uAyIKInZDHTsBAFyq2jZoTJJ_8X_0oK7zgT/pub?gid=0&single=true&output=csv";
+let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRxajqMRQG-PaBqH39Rk1j0djDE8paUBm5QQJF7S9MVQmjBO15FTSU0NHgajvpKG0FHHoo7IHNxeTF/pub?gid=0&single=true&output=csv";
 
 window.addEventListener("DOMContentLoaded", init);
 
@@ -27,7 +27,7 @@ let panelID = "my-info-panel";
  */
 function init() {
   // Create a new Leaflet map centered on the City of Galveston
-  map = L.map("map").setView([29.3, -94.5], 11); 	
+  map = L.map("map").setView([29.3, -94.8], 12); 	
 
   // This is the Carto Positron basemap
   L.tileLayer(
