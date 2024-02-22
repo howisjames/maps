@@ -6,12 +6,12 @@
  */
 
 // PASTE YOUR URLs HERE
+let geomURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9L4k5qK9m2FBoeUbB0HRQSOcLQBEbA7CjPtVlejRriM3C15Hb5KNR6BwdvAOf508q37OtG4TEryRN/pub?output=csv";
+let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR_TlrZyt4tBNn3MEPN1zIFkB_v-Zr8iOf4k2HCO_656gBgFEYKYn6i1yAml1oT68lNjxLd50XIMmhy/pub?output=csv";
 // these URLs come from Google Sheets 'shareable link' form
 // the first is the geometry layer of Galveston Trolley and the second is the points of interest
-let geomURL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSH7hjjxjxik5SmCoomunEz3KKza7pnl_V9lYb4eG1DZwSpx6vEYWoS_GXdU9KU2y_BBTw6w6TKG6yr/pub?output=csv";
-let pointsURL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRxajqMRQG-PaBqH39Rk1j0djDE8paUBm5QQJF7S9MVQmjBO15FTSU0NHgajvpKG0FHHoo7IHNxeTF/pub?output=csv";
+// let geomURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSH7hjjxjxik5SmCoomunEz3KKza7pnl_V9lYb4eG1DZwSpx6vEYWoS_GXdU9KU2y_BBTw6w6TKG6yr/pub?output=csv";
+// let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSRxajqMRQG-PaBqH39Rk1j0djDE8paUBm5QQJF7S9MVQmjBO15FTSU0NHgajvpKG0FHHoo7IHNxeTF/pub?output=csv";
 
 window.addEventListener("DOMContentLoaded", init);
 
