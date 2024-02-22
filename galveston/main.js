@@ -22,7 +22,7 @@ let panelID = "my-info-panel";
  */
 function init() {
   // Create a new Leaflet map centered on the City of Galveston
-  map = L.map("map").setView([29.3, -94.8], 18); 	
+  map = L.map("map").setView([29.3, -94.8], 15); 	
 
   // This is the Carto Positron basemap
   L.tileLayer(
