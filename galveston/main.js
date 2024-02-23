@@ -171,7 +171,7 @@ function addPoints(data) {
     marker.feature = {
       properties: {
         name: data[row].Site,
-        description: data[row].Description  + '<br> Fee: ' + data[row].Cost  + "<br><a target='_new' href=" + data[row].URL + ">" + data[row].URL + + "<br><a target='_new' href=" + data[row].URL2 + ">" + data[row].URL2 + '</a>',
+        description: data[row].Description  + '<br>Fee: ' + data[row].Cost  + "<br><a target='_new' href=" + data[row].URL + ">" + data[row].URL + "<br><a target='_new' href=" + data[row].URL2 + ">" + data[row].URL2 + '</a>',
       },
     };
     marker.on({
