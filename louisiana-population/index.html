@@ -35,7 +35,7 @@
 
 <div id='map'></div>
 
-<script type="text/javascript" src="../data/population_louisiana_2023_points.js"></script>
+<script type="text/javascript" src="./data/population_louisiana_2023_points.js"></script>
 
 <script type="text/javascript">
 
@@ -47,7 +47,7 @@
 	}).addTo(map);
 	
 	/* add parish boundarys */
-	var geojsonLayer = new L.GeoJSON.AJAX("../data/louisiana_parishes.geojson");
+	var geojsonLayer = new L.GeoJSON.AJAX("./data/louisiana_parishes.geojson");
 	geojsonLayer.addTo(map);
 
 </script>
