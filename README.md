@@ -30,7 +30,7 @@ This interactive map was created in preparation for a vacation to Galveston, TX 
 ### Components
 
 1. index.html - essentially only the page title needs to be customized here. Everything else is links to codebase already in my Github "maps" directory.
-2. main.js - this javascrip must be heavily customized for this dataset, providing links to 1 or 2 publicly shared google sheets data files. This data populates the map pins or shapes. Also the type of basemap and centerpoint and zoom level must be set as desired.
+2. main.js - this javascript must be heavily customized for this dataset, providing links to 1 or 2 publicly shared google sheets data files. This data populates the map pins or shapes. Also the type of basemap and centerpoint and zoom level must be set as desired.
 3. Data stored in Google Sheets.
 
 ### Map Data
